@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Configurar Perfil</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="cadastro.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-white font-poppins">
+        <div class="wrapper wrapper--w680">
+            <!--<img class="center" src="logo.png">-->
+            <div class="card card-4">
+                <div class="card-body">
+                    <img class="center" src="perfil.png">
+                    <h2 class="title" style="text-align: center;">Laís Carraro</h2>
+                    <form method="POST">
+                        <div class="input-group">
+                            <label class="label">Escolaridade</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="subject" id="escolaridadeDropdown">
+                                    <option disabled="disabled">Selecione</option>
+                                    <option>Fundamental I - 5º ano</option>
+                                    <option>Fundamental II - 6º ano</option>
+                                    <option>Fundamental II - 7º ano</option>
+                                    <option>Fundamental II - 8º ano</option>
+                                    <option>Fundamental II - 9º ano</option>
+                                    <option>Ensino Médio - 1º ano</option>
+                                    <option>Ensino Médio - 2º ano</option>
+                                    <option>Ensino Médio - 3º ano</option>
+                                    <option>Cursinho</option>
+                                    <option selected="selected">Graduação</option>
+                                    <option>Outros</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group" id="cursoDropdown">
+                            <label class="label">Curso (Graduação)</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="subject">
+                                    <option disabled="disabled">Selecione</option>
+                                    <option selected="selected">Sistemas de Informação</option>
+                                    <option>Ciência da Computação</option>
+                                    <option>Direito</option>
+                                    <option>Biblioteconomia</option>
+                                    <option>Oceanografia</option>
+                                    <option>Outro</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Instituição de Ensino</label>
+                                    <input class="input--style-4" type="text" name="first_name" value="EACH - USP">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Matérias</label>
+                                    <span class="badge badge-pill badge-primary">Cálculo 2</span>
+                                    <span class="badge badge-pill badge-warning">Matemática Discreta</span>
+                                    <span class="badge badge-pill badge-danger">Alemão 1</span>
+                                    <span class="badge badge-pill badge-success">Estatística</span>
+                                    <span class="badge badge-pill badge-primary">Compiladores</span>
+                                    <span class="badge badge-pill badge-warning">Algoritmos</span>
+                                    <span class="badge badge-pill badge-danger">Computação Gráfica</span>
+                                    <span class="badge badge-pill badge-success">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" style="width: 100%;" type="submit">Concluir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <img class="center p-b-20 p-t-20" src="logopreto.png" style="width: 20%; opacity: 0.3; max-width: 100px;">
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    
+    <script>
+      // Add the following code if you want the name of the file appear on select
+      $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+      });
+      
+      $( "#escolaridadeDropdown" )
+        .change(function() {
+          var str = "";
+          $( "#escolaridadeDropdown option:selected" ).each(function() {
+            str += $( this ).text();
+          });
+          if(str == "Graduação") {
+            $( "#cursoDropdown" ).attr("display", "inherit");
+          }
+        })
+        .trigger( "change" );
+      
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
