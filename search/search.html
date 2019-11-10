@@ -29,7 +29,6 @@
         </div>
       </form>
     </div>
-    <input type="button" class="btn btn--radius-2 btn--green" style="width:100%" onclick="pesquisar()" value="Pesquisar">
         
     <script>
       var btnDelete = document.getElementById('clear');
@@ -41,6 +40,14 @@
       //- inputFocus.addEventListener('click', function() {
       //-   this.classList.add('isFocus')
       //- })
+      
+      inputFocus.addEventListener("keyup", function(event) {
+        if(event.keyCode == 13) {
+          event.preventDefault();
+          pesquisar();
+        }
+      });
+      
       btnDelete.addEventListener('click', function(e)
       {
         e.preventDefault();
