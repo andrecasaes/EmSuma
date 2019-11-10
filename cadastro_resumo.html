@@ -76,7 +76,7 @@
                                   <input class="input--style-4" type="text" name="first_name" required>
                             </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" style="width: 100%;" type="submit">Enviar</button>
+                            <button class="btn btn--radius-2 btn--blue" style="width: 100%;" type="submit" onclick="enviar()">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -98,6 +98,11 @@
         var fileName = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
       });
+      
+      function enviar() {
+        location.href = "index.html";   
+      }
+      
     </script>
 
     <!-- Main JS-->
