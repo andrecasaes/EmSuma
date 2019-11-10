@@ -66,7 +66,7 @@
                 <button type="button" class="btn btn--radius-2 btn--blue">
                     <h1>Cálculo 2</h1>
                 </button><br>
-                <button type="button" class="btn btn--radius-2 btn--amarelo">
+                <button type="button" class="btn btn--radius-2 btn--amarelo" onclick="md()">
                     <h1>Matemática Discreta</h1>
                 </button><br>
                 <button type="button" class="btn btn--radius-2 btn--red">
@@ -96,7 +96,13 @@
     <script src="vendor/select2/select2.min.js"></script>
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
-
+    
+    <script>
+        function md() {
+            location.href = "resumo.html";   
+        }
+    </script>
+    
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
