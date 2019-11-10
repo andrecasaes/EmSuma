@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="forum.css" rel="stylesheet" media="all">
+        <link href="feed.css" rel="stylesheet" media="all">
             <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
@@ -14,55 +14,53 @@
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     </head>
     <body>
-            <div class="page-wrapper bg-yellow p-b-20 font-poppins">
+            <div class="page-wrapper bg-yellow font-poppins">
                 <div class="wrapper wrapper--w680">
                     <h1 class="p-b-30 p-t-30" style="text-align: center;">Matemática Discreta</h1>
-                    <input type="button" class="btn btn--radius-2 btn--green" style="width:100%" onclick="feed()" value="Veja o Feed">
+                    <input type="button" class="btn btn--radius-2 btn--green" style="width:100%" onclick="feed()" value="Voltar para o Feed">
                     <div class="card card-4">
                         <div class="card-body">
                             <form method="POST">
                                     <img src="eu.png" style="width:10%; float:left; padding-right:10px; padding-right: 10px; padding-bottom: 10px;">
-                                <div>Karina Huh - Sistemas de Informação em EACH - USP</div> <br>
-                                <button style="cursor: pointer;">
-                                    <h1 style="text-align: left;">Quais as portas Lógicas universais?</h1>
-                                </button>
+                                <label class="title">Quais são as portas lógicas universais?</label>
+                                <div>Karina Huh</div> <br>
                               <!--<iframe src="ocd.pdf" width="100%" height="500"></iframe>-->
                               <div class="input-group">
-                                <label class="label">Palavras-chave</label>
+                                  <label class="label">Palavras-chave</label>
                                         <span class="badge badge-pill badge-primary">Portas Lógicas</span>
                                         <span class="badge badge-pill badge-warning">Circuitos</span>
                                         <span class="badge badge-pill badge-danger">Tabela-verdade</span>
+                                        <span class="badge badge-pill badge-success">AND</span>
+                                        <span class="badge badge-pill badge-primary">OR</span>
+                              </div>
                             </form>
                         </div>
-                        <h4 class="center p-b-20 p-t-20" style="text-align: left;">
-                            Ver mais 4 comentários...
-                        </h4>
                     </div>
-                    
+                    <br>
                     <div class="card card-4">
-                        <div class="card-body">
-                            <form method="POST">
+                            <div class="card-body">
+                                <form method="POST">
                                     <img src="eu.png" style="width:10%; float:left; padding-right:10px; padding-right: 10px; padding-bottom: 10px;">
-                                <div>Karina Huh - Sistemas de Informação em EACH - USP</div> <br>
-                                <button style="cursor: pointer;">
-                                    <h1 style="text-align: left;">Quais as portas Lógicas universais?</h1>
-                                </button>
-                              <!--<iframe src="ocd.pdf" width="100%" height="500"></iframe>-->
-                              <div class="input-group">
-                                <label class="label">Palavras-chave</label>
-                                        <span class="badge badge-pill badge-primary">Portas Lógicas</span>
-                                        <span class="badge badge-pill badge-warning">Circuitos</span>
-                                        <span class="badge badge-pill badge-danger">Tabela-verdade</span>
-                            </form>
+                                    <label class="title">O que é uma relação total?</label>
+                                    <div>Karina Huh</div> <br>
+                                  
+                                  <!--<iframe src="ocd.pdf" width="100%" height="500"></iframe>-->
+                                  <div class="input-group">
+                                    
+                                      <label class="label">Palavras-chave</label>
+                                            <span class="badge badge-pill badge-primary">Funções</span>
+                                            <span class="badge badge-pill badge-warning">Conjuntos</span>
+                                            <span class="badge badge-pill badge-danger">Concatenação</span>
+                                            <span class="badge badge-pill badge-success">Composição</span>
+                                            <span class="badge badge-pill badge-primary">Bijeção</span>
+                                  </div>
+                                </form>
+                            </div>
                         </div>
-                    <h4 class="center p-b-20 p-t-20" style="text-align: left;">
-                            Ver mais 4 comentários...
-                    </h4>
-                    </div>
-                   </div>
-            
-            <img class="center p-b-20 p-t-20" src="logopreto.png" style="width: 20%; opacity: 0.3; max-width: 100px;">
-         </div>
+                </div>
+                <img class="center p-b-20 p-t-20" src="logopreto.png" style="width: 20%; opacity: 0.3; max-width: 100px;" onclick="menu()">
+            </div>
+        
             <!-- Jquery JS-->
             <script src="vendor/jquery/jquery.min.js"></script>
             <!-- Vendor JS-->
@@ -78,12 +76,12 @@
                 $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
               });
               
-              function apontarErro() {
-                location.href = "apontarErro.html";
+              function resumo() {
+                location.href = "resumo.html";
               }
               
-              function download() {
-                location.href = "ocd.pdf";
+              function menu() {
+                location.href = "index.html";
               }
                 
               function feed() {
