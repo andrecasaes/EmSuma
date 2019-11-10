@@ -93,7 +93,7 @@
                         </div>
                         <br>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" style="width: 100%;" type="submit">Concluir</button>
+                            <button class="btn btn--radius-2 btn--blue" style="width: 100%;" type="submit" onclick="concluir">Concluir</button>
                         </div>
                     </form>
                 </div>
@@ -127,6 +127,10 @@
           }
         })
         .trigger( "change" );
+        
+        function concluir() {
+            location.href = "index.html";   
+        }
       
     </script>
 
