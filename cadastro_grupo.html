@@ -17,13 +17,12 @@
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
-
     <!-- Vendor CSS-->
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
@@ -38,47 +37,20 @@
             <img class="center" src="logo.png" onclick="menu()">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Novo Resumo</h2>
+                    <h2 class="title">Novo Grupo</h2>
                     <form method="POST">
-                                <div class="input-group">
-                                    <label class="label">Título</label>
-                                    <input class="input--style-4" type="text" name="first_name">
-                                </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Matéria</label>
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject">
-                                            <option disabled="disabled" selected="selected">Selecione</option>
-                                            <option>Cálculo 2</option>
-                                            <option>Matemática Discreta</option>
-                                            <option>Estatística</option>
-                                            <option>Compiladores</option>
-                                            <option>Alemão 1</option>
-                                            <option>Algoritmos</option>
-                                        </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Resumo</label>
-                                    <div class="input-group">
-                                      <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                      <label class="custom-file-label" for="customFile">Arquivo do resumo</label>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="input-group">
+                            <label class="label">Nome do Grupo</label>
+                            <input class="input--style-4" type="text" name="first_name">
                         </div>
+                        
                         <br>
                             <div class="input-group">
-                                  <label class="label">Referências</label>
-                                  <input class="input--style-4" type="text" name="first_name" required>
+                                  <label class="label">Descrição</label>
+                                   <textarea name="descr" class="input--style-4" cols="55" rows="5" style="line-height: 1.5;" required></textarea>
                             </div>
                         <div class="p-t-15">
-                            <input class= "btn btn--radius-2 btn--blue" style="width: 100%;"  data-toggle="modal" data-target="#exampleModalCenter" value="Enviar"> 
+                            <input class= "btn btn--radius-2 btn--blue" style="width: 100%;"  data-toggle="modal" data-target="#exampleModalCenter" value="Criar"> 
                         </div>
                     </form>
                 </div>
@@ -86,24 +58,27 @@
         </div>
         <img class="center p-b-20 p-t-20" src="logopreto.png" style="width: 20%; opacity: 0.3; max-width: 100px;" onclick="menu()">
     </div>
+<!-- Button trigger modal -->
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Obrigado!</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Grupo &lt;Nome&gt; criado</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <p style="text-align: center;">Resumo adicionado</p>
-                <p style="text-align: center;">com sucesso!</p>
+                <strong>Link de compartilhamento:</strong><br>
+                http://www.emsuma/entrar/&lt;Nome&gt;<br><br>
+                <p>Mande este link para as pessoas que quer adicionar ao grupo. Basta clicar e voilá!</p>
             </div>
             <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                <button type="button" class="btn btn-primary" onclick="concluir()">OK</button>
+                <button type="button" class="btn btn-primary" onclick="concluir()">OK!</button>
             </div>
         </div>
     </div>
@@ -129,7 +104,6 @@
       function menu() {
          location.href = "index.html";   
       }
-      
     </script>
 
     <!-- Main JS-->
