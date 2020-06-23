@@ -75,16 +75,16 @@
                         <br>
                             <div class="input-group">
                                   <label class="label">Referências</label>
-                                  <input class="input--style-4" type="text" name="first_name" required>
+                                  <input class="input--style-4" type="text" name="first_name" data-toggle="tooltip" data-placement="top" title="Sem as referias, não podemos confiar no seu resumo" required> 
                             </div>
                         <div class="p-t-15">
-                            <input class= "btn btn--radius-2 btn--blue" style="width: 100%;"  data-toggle="modal" data-target="#exampleModalCenter" value="Enviar"> 
+                            <input class= "btn btn--radius-2 btn--green" style="width: 100%;"  data-toggle="modal" data-target="#exampleModalCenter" value="Enviar"> 
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <img class="center p-b-20 p-t-20" src="logopreto.png" style="width: 20%; opacity: 0.3; max-width: 100px;" onclick="menu()">
+        <img class="center p-b-20 p-t-20" src="logopreto.png" style="width: 20%; opacity: 0.3; max-width: 100px;">
     </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -103,7 +103,7 @@
             </div>
             <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                <button type="button" class="btn btn-primary" onclick="concluir()">OK</button>
+                <button type="button" class="btn btn--green" onclick="concluir()">OK</button>
             </div>
         </div>
     </div>
@@ -121,21 +121,24 @@
         var fileName = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
       });
-      
-      function concluir() {
-        location.href = "index.html";   
-      }
-        
-      function menu() {
-         location.href = "index.html";   
-      }
-      
+        function concluir() {
+            location.href = "cadastro_resumo.html";
+        }
     </script>
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+<style>
+a.my-tool-tip, a.my-tool-tip:hover, a.my-tool-tip:visited {
 
+    color: black;
+}
+
+</style>
 </html>
 <!-- end document-->
+
+30%
+70%
